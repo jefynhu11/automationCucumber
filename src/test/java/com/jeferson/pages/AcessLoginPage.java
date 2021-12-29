@@ -1,5 +1,6 @@
 package com.jeferson.pages;
 
+import com.jeferson.framework.support.Property;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -12,7 +13,8 @@ public class AcessLoginPage {
     }
 
     public void acessWindowLogin() {
-        driver.get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
+        driver.get(Property.get("url"));
+
     }
 
     public void createEmailField(String valor) {
