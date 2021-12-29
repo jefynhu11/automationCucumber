@@ -5,12 +5,9 @@ import com.jeferson.runner.RunCucumberTest;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class AcessLoginTask extends RunCucumberTest {
 
-    WebDriver driver = new ChromeDriver();
     AcessLoginPage acessLoginPage = new AcessLoginPage(driver);
 
     @Dado("^que estou no site da loja$")
