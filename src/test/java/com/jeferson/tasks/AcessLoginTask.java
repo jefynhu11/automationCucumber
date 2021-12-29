@@ -17,7 +17,6 @@ public class AcessLoginTask extends RunCucumberTest {
     public void que_estou_no_site_da_loja() {
         System.out.println("a");
         acessLoginPage.acessWindowLogin();
-//        driver.get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
     }
 
     @Dado("^eu preencho para criar meu email$")
