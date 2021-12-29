@@ -2,8 +2,8 @@ package com.jeferson.runner;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,15 +17,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 )
 public class RunCucumberTest {
 
-//    public static WebDriver driver;
-//
-//    @BeforeEach
-//    public static void setUp() {
-//        driver = new ChromeDriver();
-//    }
-//
-//    @AfterEach
-//    public static void tearDown() {
-//        driver.quit();
-//    }
+    public static WebDriver driver;
+
+    @BeforeClass
+    public static void setUp() {
+        System.out.println("Iniciou");
+        driver = new ChromeDriver();
+    }
+
+    @AfterClass
+    public static void tearDown() {
+        System.out.println("Finalizou");
+        driver.quit();
+    }
 }
