@@ -19,8 +19,8 @@ public class BaseTest extends DriverFactory {
     @AfterClass
     public static void tearDown() throws InterruptedException {
         System.out.println("Finalizou");
-        Thread.sleep(3000);
-        driver.quit();
+//        Thread.sleep(3000);
+//        driver.quit();
     }
 
 }

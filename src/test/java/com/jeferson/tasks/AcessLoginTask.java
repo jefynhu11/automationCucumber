@@ -20,12 +20,13 @@ public class AcessLoginTask extends BaseTest {
     @Dado("^eu preencho para criar meu email$")
     public void eu_preencho_para_criar_meu_email() {
         System.out.println("b");
-        acessLoginPage.createEmailField("teste@gmail.com");
+        acessLoginPage.createEmailField("testes1@gmail.com");
     }
 
     @Dado("^clico em botao para inicia criar conta$")
     public void clico_em_botao_para_inicia_criar_conta() {
         System.out.println("c");
+        acessLoginPage.createAnAccountButton();
     }
 
     @Quando("^eu preencho todos os campos$")
