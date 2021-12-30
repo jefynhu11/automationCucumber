@@ -18,6 +18,10 @@ public class AcessLoginPage {
     }
 
     public void createEmailField(String valor) {
-        driver.findElement(By.id("email")).sendKeys(valor);
+        driver.findElement(By.id("email_create")).sendKeys(valor);
+    }
+
+    public void createAnAccountButton(){
+        driver.findElement(By.id("SubmitCreate")).click();
     }
 }
