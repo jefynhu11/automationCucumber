@@ -1,5 +1,6 @@
 package com.jeferson.runner;
 
+import com.jeferson.framework.support.BaseTest;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import org.junit.AfterClass;
@@ -15,19 +16,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
         tags = {"@cadastrar-login"},
         glue = {"com/jeferson/tasks"}
 )
-public class RunCucumberTest {
+public class RunCucumberTest extends BaseTest {
 
-    public static WebDriver driver;
-
-    @BeforeClass
-    public static void setUp() {
-        System.out.println("Iniciou");
-        driver = new ChromeDriver();
-    }
-
-    @AfterClass
-    public static void tearDown() {
-        System.out.println("Finalizou");
-        driver.quit();
-    }
 }
