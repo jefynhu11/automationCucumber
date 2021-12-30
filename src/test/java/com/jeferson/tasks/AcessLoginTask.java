@@ -1,12 +1,13 @@
 package com.jeferson.tasks;
 
+import com.jeferson.framework.support.BaseTest;
 import com.jeferson.pages.AcessLoginPage;
 import com.jeferson.runner.RunCucumberTest;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
 
-public class AcessLoginTask extends RunCucumberTest {
+public class AcessLoginTask extends BaseTest {
 
     AcessLoginPage acessLoginPage = new AcessLoginPage(driver);
 
