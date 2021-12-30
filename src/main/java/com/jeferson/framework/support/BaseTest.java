@@ -1,18 +1,19 @@
 package com.jeferson.framework.support;
 
+import com.jeferson.framework.webdrives.DriverFactory;
+import com.jeferson.framework.webdrives.DriverManager;
+import com.jeferson.framework.webdrives.Drivers;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-public class BaseTest {
-
-    public static WebDriver driver;
+public class BaseTest extends DriverFactory {
 
     @BeforeClass
     public static void setUp() {
         System.out.println("Iniciou");
-        driver = new ChromeDriver();
+        driver = getBrowser(Drivers.CHROME);
+        DriverManager.setDriver(driver);
+        DriverManager.getDriver();
     }
 
     @AfterClass
