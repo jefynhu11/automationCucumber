@@ -14,7 +14,6 @@ public class AcessLoginPage {
 
     public void acessWindowLogin() {
         driver.get(Property.get("url"));
-
     }
 
     public void createEmailField(String valor) {
