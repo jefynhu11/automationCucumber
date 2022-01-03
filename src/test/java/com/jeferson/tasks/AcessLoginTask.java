@@ -2,7 +2,6 @@ package com.jeferson.tasks;
 
 import com.jeferson.framework.support.BaseTest;
 import com.jeferson.pages.AcessLoginPage;
-import com.jeferson.runner.RunCucumberTest;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
@@ -27,11 +26,6 @@ public class AcessLoginTask extends BaseTest {
     public void clico_em_botao_para_inicia_criar_conta() {
         System.out.println("c");
         acessLoginPage.createAnAccountButton();
-    }
-
-    @Quando("^eu preencho todos os campos$")
-    public void eu_preencho_todos_os_campos() {
-        System.out.println("d");
     }
 
     @Quando("^clico em botao para registrar da conta$")
