@@ -1,5 +1,6 @@
 package com.jeferson.pages;
 
+import com.jeferson.framework.support.Fakers;
 import com.jeferson.framework.support.Wait;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -14,10 +15,12 @@ public class CreateAccountPage {
 
     WebDriver driver;
     WebDriverWait wait;
+    Fakers fakers;
 
     public CreateAccountPage(WebDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(driver, 20);
+        fakers = new Fakers();
     }
 
     public void title(int value) {
@@ -34,13 +37,13 @@ public class CreateAccountPage {
     }
 
     public void firstNameField() {
-        driver.findElement(By.id("customer_firstname")).sendKeys("Jeferson");
+        driver.findElement(By.id("customer_firstname")).sendKeys(fakers.getFirstName());
     }
     public void lastNameField() {
-        driver.findElement(By.id("customer_lastname")).sendKeys("Lopes");
+        driver.findElement(By.id("customer_lastname")).sendKeys(fakers.getLastName());
     }
     public void passwordField() {
-        driver.findElement(By.id("passwd")).sendKeys("123456");
+        driver.findElement(By.id("passwd")).sendKeys(fakers.getPassword());
     }
     public void dateSelect() {
         Select date = new Select(driver.findElement(By.id("days")));
@@ -55,10 +58,10 @@ public class CreateAccountPage {
         date.selectByValue("1992");
     }
     public void adressField() {
-        driver.findElement(By.id("address1")).sendKeys("Setor 1");
+        driver.findElement(By.id("address1")).sendKeys(fakers.getAddress1());
     }
     public void cityField() {
-        driver.findElement(By.id("city")).sendKeys("Estrelinha");
+        driver.findElement(By.id("city")).sendKeys(fakers.getCity());
     }
     public void stateSelect() {
         Select state = new Select(driver.findElement(By.id("id_state")));
