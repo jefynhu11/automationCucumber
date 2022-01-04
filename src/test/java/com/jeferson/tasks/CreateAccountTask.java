@@ -28,7 +28,7 @@ public class CreateAccountTask extends BaseTest {
     @Quando("^clico em botao para registrar da conta$")
     public void clico_em_botao_para_registrar_da_conta() {
         System.out.println("e");
-//        createAccountPage.registerButton();
+        createAccountPage.registerButton();
     }
 
 }
